@@ -78,7 +78,7 @@ variable "tools_upload_path" {
 
 variable "vm_name" {
   type    = string
-  default = "debian"
+  default = "vagrant"
 }
 
 variable "vmx_data" {
@@ -108,3 +108,8 @@ variable "vm_headless" {
   default = true
 }
 
+variable "cloud_token" {
+  // type = string
+  default = env("VAGRANT_CLOUD_TOKEN")
+
+}
